@@ -9,6 +9,7 @@ import { config } from '../config.js';
 export async function signup(req, res) {
   const { username, password, name, email } = req.body;
   // username(ID) 중복 확인
+  console.log(username);
   const dupID = await userRepository.findByUsername(username);
   if (dupID) {
     return res.status(409).json({ message: `${username} already exists` });
