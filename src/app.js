@@ -14,10 +14,14 @@ connect();
 const roomRouter = require(`./router/room`);
 const shopsRouter = require(`./router/shops`);
 
+//파싱을 위한 임시 라우터
+// const parsingRouter = require(`./html_parsing`);
+
 //room 에서 발생하는 라우팅은 /rooms
 app.use('/room', roomRouter);
 //shop 에서 발생하는 라우팅은 /shops
 app.use('/shops', shopsRouter);
+// app.use('/parsing', parsingRouter);
 
 // 인자가 4개면 에러
 app.use((err, req, res, next) => {

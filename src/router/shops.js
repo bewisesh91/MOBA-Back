@@ -6,7 +6,7 @@ const shopsRouter = express.Router();
 // url : www.moba.com/shops
 // method : get
 shopsRouter.get('/', (req, res) => {
-  console.log("shoplists")
+  console.log('shoplists');
   res.send("listing user's favorite sites");
 });
 
